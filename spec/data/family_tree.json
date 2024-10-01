@@ -1,0 +1,142 @@
+{
+  "name": "King Arthur",
+  "gender": "Male",
+  "partner": {
+    "name": "Queen Margret",
+    "gender": "Female"
+  },
+  "children": [
+    {
+      "name": "Bill",
+      "gender": "Male",
+      "partner": {
+        "name": "Flora",
+        "gender": "Female"
+      },
+      "children": [
+        {
+          "name": "Victoire",
+          "gender": "Female",
+          "partner": {
+            "name": "Ted",
+            "gender": "Male"
+          },
+          "children": [
+            {
+              "name": "Remus",
+              "gender": "Male"
+            }
+          ]
+        },
+        {
+          "name": "Dominique",
+          "gender": "Female"
+        },
+        {
+          "name": "Louis",
+          "gender": "Male"
+        }
+      ]
+    },
+    {
+      "name": "Charlie",
+      "gender": "Male"
+    },
+    {
+      "name": "Percy",
+      "gender": "Male",
+      "partner": {
+        "name": "Audrey",
+        "gender": "Female"
+      },
+      "children": [
+        {
+          "name": "Molly",
+          "gender": "Female"
+        },
+        {
+          "name": "Lucy",
+          "gender": "Female"
+        }
+      ]
+    },
+    {
+      "name": "Ronald",
+      "gender": "Male",
+      "partner": {
+        "name": "Helen",
+        "gender": "Female"
+      },
+      "children": [
+        {
+          "name": "Malfoy",
+          "gender": "Male",
+          "partner": {
+            "name": "Rose",
+            "gender": "Female"
+          },
+          "children": [
+            {
+              "name": "Draco",
+              "gender": "Male"
+            },
+            {
+              "name": "Aster",
+              "gender": "Female"
+            }
+          ]
+        },
+        {
+          "name": "Hugo",
+          "gender": "Male"
+        }
+      ]
+    },
+    {
+      "name": "Ginerva",
+      "gender": "Female",
+      "partner": {
+        "name": "Harry",
+        "gender": "Male"
+      },
+      "children": [
+        {
+          "name": "Darcy",
+          "gender": "Female",
+          "partner": {
+            "name": "James",
+            "gender": "Male"
+          },
+          "children": [
+            {
+              "name": "William",
+              "gender": "Male"
+            }
+          ]
+        },
+        {
+          "name": "Alice",
+          "gender": "Female",
+          "partner": {
+            "name": "Albus",
+            "gender": "Male"
+          },
+          "children": [
+            {
+              "name": "Ron",
+              "gender": "Male"
+            },
+            {
+              "name": "Ginny",
+              "gender": "Female"
+            }
+          ]
+        },
+        {
+          "name": "Lily",
+          "gender": "Female"
+        }
+      ]
+    }
+  ]
+}
