@@ -1,0 +1,14 @@
+{
+  "name": "King Arthur",
+  "gender": "Male",
+  "partner": {
+    "name": "Queen Margret",
+    "gender": "Female"
+  },
+  "children": [
+    {
+      "name": "Bill",
+      "gender": "Male"
+    }
+  ]
+}
