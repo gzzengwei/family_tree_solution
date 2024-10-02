@@ -1,34 +1,142 @@
-# FamilyTree
+# Family Tree
 
-TODO: Delete this and the text below, and describe your gem
+## Summary
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/family_tree`. To experiment with that code, run `bin/console` for an interactive prompt.
+Family Tree is a Ruby application that allows you to build and query family relationships. It provides functionality to add children to the family tree and retrieve various relationships between family members.
 
-## Installation
+details see [requirements](requirements.md)
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+## Project Setup
 
-Install the gem and add to the application's Gemfile by executing:
+1. Clone the repository:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+2. Install dependencies:
+   ```
+   bundle install
+   ```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+3. Run the setup script:
+   ```
+   bin/setup
+   ```
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+## Project Structure
 
-## Usage
+- `lib/family_tree/`: Contains the core classes of the application
+  - `app.rb`: Main application logic
+  - `build_tree.rb`: Builds the family tree from JSON data
+  - `get_relationship.rb`: Handles relationship queries
+  - `parser.rb`: Parses the JSON input file
+  - `person.rb`: Represents a person in the family tree
+- `bin/family_tree`: Entry point for the command-line application
+- `spec/`: Contains all the test files
 
-TODO: Write usage instructions here
+### Notes:
 
-## Development
+Default data file and input files are in `spec/data` folder
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+## Main Features
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+- Build a family tree from JSON data
+- Add children to existing family members(on Mother's side only)
+- Query relationships between family members
+
+## Command Examples
+
+To run the Family Tree application, use the following command:
+
+```
+bin/family_tree input_file.txt [tree_data.json]
+```
+
+
+Where:
+- `input_file.txt` is a file containing commands to add children or get relationships
+- `tree_data.json` (optional) is a JSON file containing the initial family tree data, example:
+
+```
+bin/family_tree spec/data/input.txt spec/fixtures/valid_family_tree.json
+```
+
+Example input file (`input_file.txt`):
+```
+ADD_CHILD Flora Minerva Female
+GET_RELATIONSHIP Remus Maternal-Aunt
+GET_RELATIONSHIP Minerva Siblings
+```
+
+### JSON Format for Initial Family Tree Data
+
+The `tree_data.json` file should follow this structure:
+
+```json
+{
+  "name": "King Arthur",
+  "gender": "Male",
+  "partner": {
+    "name": "Queen Margret",
+    "gender": "Female"
+  },
+  "children": [
+    {
+      "name": "Bill",
+      "gender": "Male",
+      "partner": {
+        "name": "Flora",
+        "gender": "Female"
+      },
+      "children": [
+        {
+          "name": "Victoire",
+          "gender": "Female"
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Available Relationship Types
+
+The application can query the following relationship types:
+
+- Paternal-Uncle
+- Maternal-Uncle
+- Paternal-Aunt
+- Maternal-Aunt
+- Sister-In-Law
+- Brother-In-Law
+- Son
+- Daughter
+- Siblings
+
+## Tests
+
+To run the test suite, use the following command:
+
+```
+bundle exec rspec
+```
+
+This will run all the tests in the `spec` directory.
+
+## Linter
+
+This project uses StandardRB for linting. To run the linter, use:
+
+```
+bundle exec standardrb
+```
+
+To automatically fix linting issues:
+
+```
+bundle exec standardrb --fix
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/family_tree.
+Bug reports and pull requests are welcome on GitHub at https://github.com/your-username/family-tree.
 
 ## License
 
