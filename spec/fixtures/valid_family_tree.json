@@ -8,7 +8,85 @@
   "children": [
     {
       "name": "Bill",
-      "gender": "Male"
+      "gender": "Male",
+      "partner": {
+        "name": "Flora",
+        "gender": "Female"
+      },
+      "children": [
+        {
+          "name": "Victoire",
+          "gender": "Female",
+          "partner": {
+            "name": "Ted",
+            "gender": "Male"
+          },
+          "children": [
+            {
+              "name": "Remus",
+              "gender": "Male"
+            },
+            {
+              "name": "Nymphadora",
+              "gender": "Female"
+            }
+          ]
+        },
+        {
+          "name": "Dominique",
+          "gender": "Female"
+        },
+        {
+          "name": "Louis",
+          "gender": "Male"
+        }
+      ]
+    },
+    {
+      "name": "Ginerva",
+      "gender": "Female",
+      "partner": {
+        "name": "Harry",
+        "gender": "Male"
+      },
+      "children": [
+        {
+          "name": "James",
+          "gender": "Male",
+          "partner": {
+            "name": "Alice",
+            "gender": "Female"
+          },
+          "children": [
+            {
+              "name": "Albus",
+              "gender": "Male"
+            }
+          ]
+        },
+        {
+          "name": "Lily",
+          "gender": "Female"
+        }
+      ]
+    },
+    {
+      "name": "Percy",
+      "gender": "Male",
+      "partner": {
+        "name": "Audrey",
+        "gender": "Female"
+      },
+      "children": [
+        {
+          "name": "Molly",
+          "gender": "Female"
+        },
+        {
+          "name": "Lucy",
+          "gender": "Female"
+        }
+      ]
     }
   ]
 }
