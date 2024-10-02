@@ -69,11 +69,11 @@
       },
       "children": [
         {
-          "name": "Malfoy",
-          "gender": "Male",
+          "name": "Rose",
+          "gender": "Female",
           "partner": {
-            "name": "Rose",
-            "gender": "Female"
+            "name": "Malfoy",
+            "gender": "Male"
           },
           "children": [
             {
@@ -101,11 +101,11 @@
       },
       "children": [
         {
-          "name": "Darcy",
-          "gender": "Female",
+          "name": "James",
+          "gender": "Male",
           "partner": {
-            "name": "James",
-            "gender": "Male"
+            "name": "Darcy",
+            "gender": "Female"
           },
           "children": [
             {
@@ -115,11 +115,11 @@
           ]
         },
         {
-          "name": "Alice",
-          "gender": "Female",
+          "name": "Albus",
+          "gender": "Male",
           "partner": {
-            "name": "Albus",
-            "gender": "Male"
+            "name": "Alice",
+            "gender": "Female"
           },
           "children": [
             {
