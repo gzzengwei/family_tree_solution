@@ -104,7 +104,7 @@ module FamilyTree
     def siblings(person)
       return [] unless person.mother
 
-      person.mother.children
+      person.mother.children.reject { |child| person == child }
     end
 
     private

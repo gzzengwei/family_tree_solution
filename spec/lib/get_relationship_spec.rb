@@ -19,6 +19,12 @@ RSpec.describe FamilyTree::GetRelationship do
       expect(sibling_names).to include("Ginerva", "Percy")
     end
 
+    it "returns empty if no siblings" do
+      siblings = get_relationship.get("Remus", "Siblings")
+      sibling_names = siblings.map(&:name)
+      expect(sibling_names).to be_empty
+    end
+
     it "returns paternal-uncle correctly" do
       uncles = get_relationship.get("William", "Paternal-Uncle")
       uncle_names = uncles.map(&:name)
