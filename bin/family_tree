@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/family_tree'
+
+# Set default tree data file path
+default_tree_data_path = ENV["TREE_DATA_FILE"] || "spec/data/family_tree.json"
+default_tree_data_full_path = File.join(File.dirname(__FILE__), '..', default_tree_data_path)
+
+# Parse command line arguments
+input_file_path = ARGV[0]
+tree_data_path = ARGV[1] || default_tree_data_full_path
+
+# Validate input file
+unless File.exist?(input_file_path)
+  puts "Error: Input file not found: #{input_file_path}"
+  exit 1
+end
+
+# Load tree data
+tree_data = FamilyTree::Parser.call(file_path: tree_data_path)
+tree = FamilyTree::BuildTree.new(tree_data).build
+app = FamilyTree::App.new(tree)
+
+# Process input file
+File.readlines(input_file_path).each do |line|
+  command, *args = line.strip.split(' ')
+  
+  case command
+  when 'ADD_CHILD'
+    mother_name, child_name, gender = args
+    result = app.add_child(mother_name, child_name, gender)
+    puts result
+  when 'GET_RELATIONSHIP'
+    name, relationship = args
+    result = app.get_relationship(name, relationship)
+    puts result
+  else
+    puts "Unknown command: #{command}"
+  end
+end
