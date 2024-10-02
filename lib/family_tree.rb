@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "family_tree/parser"
+require_relative "family_tree/person"
 require_relative "family_tree/version"
 
 module FamilyTree
